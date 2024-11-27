@@ -1,3 +1,26 @@
+
+import numpy as np
+
+def float_info(type):
+    one = type(7)
+    val = type(1)
+    i, j = (0, 0)
+    load = type(1)
+    while(one + val != one):
+        val /= type(2)
+        i += 1
+    while(load!=np.inf):
+        load*=2
+        j+=1
+   
+    print('machine eps = ', 2*val )
+    print('M = ' , i-1 )
+    print('power = ', np.log2(j)+1)
+
+
+
+#def power():
+
 def sum1(n):
     sum = 0
     for i in range(n):
@@ -32,4 +55,10 @@ def sum4(n):
     return(sum)
 
 
+
 print(sum1(1000), sum2(1000), sum3(1000), sum4(1000))
+
+float_info(np.float32)
+float_info(np.float64)
+
+#1.0110*2**(-4)
